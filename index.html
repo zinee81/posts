@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>블로그 게시</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" /> -->
+    <script src="https://kit.fontawesome.com/d035e75539.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
       $(document).ready(() => {
@@ -22,7 +24,8 @@
               // 내용을 넣어줌
               postsHtml += `<p>${post.body}</p>`;
               // id를 넣어줌
-              postsHtml += `<span>${post.userId}</span>`;
+              let num = [Math.floor(Math.random() * 100)];
+              postsHtml += `<span>by <b>${post.userId}</b></span><span class='like'><i class="fa-solid fa-heart"></i> ${num}</span>`;
               postsHtml += `</div>`;
 
               $("#wrap").html(postsHtml);
@@ -33,6 +36,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="search"><input type="text" id="search" width="100px" /></div>
     <div id="wrap"></div>
   </body>
 </html>

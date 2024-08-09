@@ -1,7 +1,12 @@
 /* 전체 배경색, 안쪽 여백 지정 */
+body {
+  background-color: #dddddd;
+}
+#search {
+  margin: 10px 0 0 20px;
+}
 #wrap {
   height: 100%;
-  background-color: #dddddd;
   padding: 20px;
   display: flex;
   flex-wrap: wrap; /* 자동 줄바꿈 활성화 */
@@ -15,6 +20,7 @@
   background-color: white;
   border-radius: 5px;
   padding: 10px;
+  position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s; /* 그림자가 0.3초동안 서서히 나타남 */
 }
@@ -41,4 +47,9 @@
 
 .post span {
   padding: 5px;
+}
+.post span.like {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
 }
