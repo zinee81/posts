@@ -16,8 +16,7 @@
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s;
-  margin: 0 auto;
+  transition: box-shadow 0.3s; /* 그림자가 0.3초동안 서서히 나타남 */
 }
 
 .post:hover {
